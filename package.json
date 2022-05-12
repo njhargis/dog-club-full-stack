@@ -1,0 +1,129 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@3.2.0",
+  "workspaces": [
+    "api",
+    "db",
+    "img",
+    "scripts",
+    "web"
+  ],
+  "scripts": {
+    "postinstall": "husky install",
+    "start": "yarn workspaces foreach -ip run start",
+    "build": "yarn workspaces foreach -p run build",
+    "lint": "eslint --cache --report-unused-disable-directives .",
+    "test": "jest",
+    "tf": "node --no-warnings ./scripts/tf.js",
+    "g:lint": "yarn lint \"$INIT_CWD\"",
+    "g:test": "yarn test \"$INIT_CWD\"",
+    "psql": "yarn db:psql",
+    "repl": "yarn db:repl"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/register": "^7.17.0",
+    "@emotion/babel-plugin": "^11.7.2",
+    "@emotion/eslint-plugin": "^11.7.0",
+    "@emotion/react": "^11.8.2",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "babel-jest": "^27.5.1",
+    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-relay": "^13.2.0",
+    "chalk": "^4.1.2",
+    "envars": "^0.4.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.3",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "graphql-config": "^4.1.0",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "minimist": "^1.2.5",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "typescript": "^4.6.2",
+    "zx": "^4.3.0"
+  },
+  "devDependencies": {
+    "@jest/types": "^27.5.1",
+    "@types/babel__core": "^7.1.18",
+    "@types/jest": "^27.4.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^17.0.21"
+  },
+  "envars": {
+    "cwd": "./env"
+  },
+  "graphql": {
+    "projects": {
+      "api": {
+        "schema": "./api/schema.graphql",
+        "documents": "./api/**/*.ts",
+        "extensions": {
+          "endpoints": {
+            "default": "http://localhost:8080/api"
+          }
+        }
+      },
+      "web": {
+        "schema": "./api/schema.graphql",
+        "documents": "./web/**/*.{ts,tsx}",
+        "extensions": {
+          "endpoints": {
+            "default": "http://localhost:8080/api"
+          }
+        }
+      }
+    }
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "api",
+        "testMatch": [
+          "<rootDir>/api/**/*.test.ts"
+        ],
+        "testPathIgnorePatterns": [
+          "<rootDir>/api/dist/"
+        ],
+        "setupFiles": [
+          "envars/config",
+          "<rootDir>/api/utils/setupTests.ts"
+        ],
+        "transformIgnorePatterns": [],
+        "transform": {
+          "^.*[\\\\\\/](api|db)[\\\\\\/].*\\.ts$": "babel-jest",
+          "node_modules[\\\\\\/](got|p-cancelable|@szmarczak|lowercase-keys)[\\\\\\/].*\\.js$": "babel-jest"
+        }
+      }
+    ]
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  }
+}
