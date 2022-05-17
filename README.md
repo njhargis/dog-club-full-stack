@@ -1,4 +1,37 @@
 <h1 align="center">
+  Dog Club Web App Monorepo
+</h1>
+
+## Requirements
+
+- [Node.js](https://nodejs.org/) v16, [Yarn](https://yarnpkg.com/) package manager
+- Local or remote instance of [PostgreSQL](https://www.postgresql.org/) (see [Postgres.app](https://postgresapp.com/), [Google Cloud SQL](https://cloud.google.com/sql))
+- [VS Code](https://code.visualstudio.com/) editor with [recommended extensions](.vscode/extensions.json)
+
+## Getting Started
+
+Clone the repo and run `yarn install`:
+
+```bash
+$ git clone https://github.com/njhargis/dog-club-full-stack.git
+$ cd dog-club-full-stack                  # Change current directory to the newly created one
+$ yarn install                  # Install project dependencies
+```
+
+Then, add a .local.override.env file to the env folder. Override any variables that are currently hidden (e.g. 'enc:..')
+If your local Postgres credentials are different than what is within .local.env, you'll need to override those as well.
+Finally, setup your database before starting your API and web.
+
+```
+$ yarn db:reset                 # Create or update PostgreSQL database
+$ yarn api:start                # Launch GraphQL API and authentication server
+$ yarn web:start                # Launch React/Relay front-end app
+```
+
+The API server must become available at [http://localhost:8080/api](http://localhost:8080/api).<br>
+The web application front-end must become available at [http://localhost:3000/](http://localhost:3000/).
+
+<h1 align="center">
   <img src="https://s.tarkus.me/graphql-logo.png" width="128" height="128" alt="GraphQL" /><br>
   GraphQL API and Relay Starter Kit
   <br>
@@ -43,20 +76,13 @@ cloud.google.com/storage))<br>
 `├──`[`scripts`](./scripts) — Automation scripts shared across the project<br>
 `└── ...` — add more packages such as `worker`, `admin`, `mobile`, etc.
 
-## Requirements
-
-- [Node.js](https://nodejs.org/) v16, [Yarn](https://yarnpkg.com/) package manager
-- Local or remote instance of [PostgreSQL](https://www.postgresql.org/) (see [Postgres.app](https://postgresapp.com/), [Google Cloud SQL](https://cloud.google.com/sql))
-- [VS Code](https://code.visualstudio.com/) editor with [recommended extensions](.vscode/extensions.json)
-
 ## Getting Started
 
 Just clone the repo and run `yarn setup` followed by `yarn start`:
 
 ```bash
-$ git clone --origin=seed --branch=main --single-branch \
-    https://github.com/kriasoft/relay-starter-kit.git example
-$ cd ./example                  # Change current directory to the newly created one
+$ git clone https://github.com/njhargis/dog-club-full-stack.git
+$ cd dog-club-full-stack                  # Change current directory to the newly created one
 $ yarn install                  # Install project dependencies
 $ yarn setup                    # Configure environment variables
 $ yarn db:reset                 # Create or update PostgreSQL database
