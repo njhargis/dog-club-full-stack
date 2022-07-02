@@ -1,6 +1,6 @@
 # Contributing to GraphQL API Starter Kit
 
-♥ [GraphQL API Starter Kit](https://github.com/kriasoft/relay-starter-kit) and
+♥ [Dog Club Web App Monorepo](https://github.com/njhargis/dog-club-full-stack) and
 want to get involved? Thanks! There are plenty of ways you can help!
 
 Please take a moment to review this document in order to make the contribution
@@ -13,7 +13,7 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/kriasoft/relay-starter-kit/issues) is
+The [issue tracker](https://github.com/njhargis/dog-club-full-stack/issues) is
 the preferred channel for [bug reports](#bugs), [features requests](#features)
 and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
@@ -105,7 +105,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd relay-starter-kit
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/kriasoft/relay-starter-kit.git
+   git remote add upstream https://github.com/njhargis/dog-club-full-stack.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
