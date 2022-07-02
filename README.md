@@ -1,10 +1,8 @@
 <h1 align="center">
-  Dog Club Web App Monorepo
+  Dog Club Web App Monorepo</br>
   <a href="http://www.typescriptlang.org/"><img src="https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg?style=flat-square" height="20"></a>
-  <a href="http://patreon.com/koistya"><img src="https://img.shields.io/badge/dynamic/json?color=%23ff424d&label=Patreon&style=flat-square&query=data.attributes.patron_count&suffix=%20patrons&url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F233228" height="20"></a>
-  <a href="https://discord.gg/gx5pdvZ7Za"><img src="https://img.shields.io/discord/643523529131950086?label=Chat&style=flat-square" height="20"></a>
-  <a href="https://github.com/kriasoft/relay-starter-kit/stargazers"><img src="https://img.shields.io/github/stars/kriasoft/relay-starter-kit.svg?style=social&label=Star&maxAge=3600" height="20"></a>
-  <a href="https://twitter.com/koistya"><img src="https://img.shields.io/twitter/follow/koistya.svg?style=social&label=Follow&maxAge=3600" height="20"></a>
+  <a href="https://github.com/njhargis/dog-club-full-stack/stargazers"><img src="https://img.shields.io/github/stars/njhargis/dog-club-full-stack.svg?style=social&label=Star&maxAge=3600" height="20"></a>
+ 
 </h1>
 
 ## About
