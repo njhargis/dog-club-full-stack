@@ -49,7 +49,8 @@ export default async function authorize(
       identity.email
         ?.substring(0, identity.email?.indexOf("@"))
         .replace(/[^a-zA-Z._]/g, "_")
-        .replace(/__/g, "_") ||
+        .replace(/__/g, "_")
+        .replace(/\./g, "") ||
       id;
     const usernameAvailable = await db
       .table<User>("user")
