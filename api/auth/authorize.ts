@@ -76,6 +76,21 @@ export default async function authorize(
           : db.raw("DEFAULT"),
       })
       .returning("*");
+
+    //Get the id for Guest role.
+    const role = await db
+      .select("id")
+      .table<Role>("role")
+      .where({ name: "Guest" })
+      .first(db.raw(1));
+
+    // Assign the newly created user the Guest role.
+    const user_role_id = await db.fn.newUserId();
+    await db.table<UserRole>("user_role").insert({
+      id: user_role_id,
+      user_id: user.id,
+      role_id: role.id,
+    });
   }
 
   // Link credentials to user account
