@@ -53,6 +53,15 @@ function UserMenu(props: UserMenuProps): JSX.Element {
         <ListItemText primary="Account Settings" />
       </MenuItem>
 
+      <MenuItem
+        component={Link}
+        href="/dog-settings/Perrin"
+        onClick={handleClick}
+      >
+        <ListItemIcon sx={{ minWidth: 40 }} children={<Settings />} />
+        <ListItemText primary="Dog Settings" />
+      </MenuItem>
+
       <MenuItem>
         <ListItemIcon sx={{ minWidth: 40 }} children={<Brightness4 />} />
         <ListItemText primary="Dark Mode" />
