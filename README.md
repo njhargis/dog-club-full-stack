@@ -6,12 +6,13 @@
 </h1>
 
 ## About
- This project is a custom fit full-stack web app for dog training clubs.
- The eventual goal is to market the clubs, manage membership, sell classes/session, rent rings, and handle communications.
- This project was bootstrapped with [GraphQL API Starter Kit](https://github.com/kriasoft/relay-starter-kit).
- You can join their [Discord channel](https://discord.com/invite/bSsv7XM) for assistance trying to setup something similar.
- You can message me on Discord @Bird#1239 for help with this specific repository.
- 
+
+This project is a custom fit full-stack web app for dog training clubs.
+The eventual goal is to market the clubs, manage membership, sell classes/session, rent rings, and handle communications.
+This project was bootstrapped with [GraphQL API Starter Kit](https://github.com/kriasoft/relay-starter-kit).
+You can join their [Discord channel](https://discord.com/invite/bSsv7XM) for assistance trying to setup something similar.
+You can message me on Discord @Bird#1239 for help with this specific repository.
+
 ## Code Features
 
 - Monorepo project structure powered by Yarn with PnP
@@ -68,6 +69,7 @@ cloud.google.com/storage))<br>
 `└── ...` — add more packages such as `worker`, `admin`, `mobile`, etc.
 
 ## References
+
 - [GraphQL API and Relay Starter Kit](https://github.com/kriasoft/relay-starter-kit)
 - [Getting Started with Cloud Functions (2nd gen)](https://codelabs.developers.google.com/codelabs/cloud-starting-cloudfunctions-v2)
 - [Yarn 2 (Berry) - Plug'n'play, constraints and workspaces](https://www.youtube.com/watch?v=HUVawJXeHfU) by [@jherr](https://github.com/jherr)
@@ -89,5 +91,5 @@ Copyright © 2022-present Neil Hargis Solutions. This source code is licensed un
 
 ---
 
-<sup>Made with ♥ by Neil Hargis Solutions in conjunction with Nashville Dog Training Club & Murfreesboro Dog Training Club. 
+<sup>Made with ♥ by Neil Hargis Solutions in conjunction with Nashville Dog Training Club & Murfreesboro Dog Training Club.
 Generously aided by [contributors](https://github.com/njhargis/dog-club-full-stack/graphs/contributors).</sup>
