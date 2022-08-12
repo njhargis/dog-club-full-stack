@@ -54,6 +54,7 @@ export type Dog = {
   breed: string | null;
   picture: Record<string, unknown>;
   deleted_at: Date | null;
+  name: string | null;
 };
 
 export type DogVaccination = {

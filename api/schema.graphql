@@ -17,6 +17,9 @@ type Root {
     ids: [ID!]!
   ): [Node]!
 
+  """Fetches a dog by name."""
+  dog(name: String): Dog
+
   """The authenticated user."""
   me: User
 
@@ -37,6 +40,15 @@ type Root {
 interface Node {
   """The id of the object."""
   id: ID!
+}
+
+"""The registered dog."""
+type Dog implements Node {
+  """The ID of an object"""
+  id: ID!
+  user_id: String!
+  name: String!
+  breed: String!
 }
 
 """The registered user account."""
